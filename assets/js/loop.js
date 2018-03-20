@@ -241,7 +241,7 @@ jQuery( function($){
 	//	e.preventDefault();
 
 	//	if( !$(this).parsley('isValid') )
-			return;
+	//		return;
 
 	//	$theForm = $(this);
 	//	$btn = $(this).find('#submit-button');
