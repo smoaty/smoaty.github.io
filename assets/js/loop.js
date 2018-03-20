@@ -236,50 +236,50 @@ jQuery( function($){
 
 	$('#contact-form').parsley();
 
-	//$('.contact-form form').submit( function(e) {
+	$('.contact-form form').submit( function(e) {
 		
-	//	e.preventDefault();
+		e.preventDefault();
 
-	//	if( !$(this).parsley('isValid') )
-	//		return;
+		if( !$(this).parsley('isValid') )
+			return;
 
-	//	$theForm = $(this);
-	//	$btn = $(this).find('#submit-button');
-	//	$btnText = $btn.text();
-	//	$alert = $(this).parent().find('.alert');
+		$theForm = $(this);
+		$btn = $(this).find('#submit-button');
+		$btnText = $btn.text();
+		$alert = $(this).parent().find('.alert');
 
-	//	$btn.find('.loading-icon').addClass('fa-spinner fa-spin ');
-	//	$btn.prop('disabled', true).find('span').text("Sending...");
+		$btn.find('.loading-icon').addClass('fa-spinner fa-spin ');
+		$btn.prop('disabled', true).find('span').text("Sending...");
 
-	//	$.post('contact.php', $(this).serialize(), function(data){
+		$.post('contact.php', $(this).serialize(), function(data){
 			
-	//		$message = data.message;
+			$message = data.message;
 			
-	//		if( data.result == true ){
-	//			$theForm.slideUp('medium', function() {
-	//				$alert.removeClass('alert-danger');
-	//				$alert.addClass('alert-success').html($message).slideDown('medium');
-	//			});
-	//		}else {
-	//			$alert.addClass('alert-danger').html($message).slideDown('medium');
-	//		}
+			if( data.result == true ){
+				$theForm.slideUp('medium', function() {
+					$alert.removeClass('alert-danger');
+					$alert.addClass('alert-success').html($message).slideDown('medium');
+				});
+			}else {
+				$alert.addClass('alert-danger').html($message).slideDown('medium');
+			}
 
-//			$btn.find('.loading-icon').removeClass('fa-spinner fa-spin ');
-//			$btn.prop('disabled', false).find('span').text($btnText);
+			$btn.find('.loading-icon').removeClass('fa-spinner fa-spin ');
+			$btn.prop('disabled', false).find('span').text($btnText);
 
-//		})
-//		.fail(function() { console.log('AJAX Error'); });
+		})
+		.fail(function() { console.log('AJAX Error'); });
 
-//	});
+	});
 
 
 	// init scrollspy except on Opera, it doesn't work because body has 100% height
-//	if ( !navigator.userAgent.match("Opera/") ) {
-//		$('body').scrollspy({
-//			target: '#main-nav'
-//		});
-//	}else {
-//		$('#main-nav .nav li').removeClass('active');
-//	}
+	if ( !navigator.userAgent.match("Opera/") ) {
+		$('body').scrollspy({
+			target: '#main-nav'
+		});
+	}else {
+		$('#main-nav .nav li').removeClass('active');
+	}
 
-//});
+});
