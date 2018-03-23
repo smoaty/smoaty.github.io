@@ -5261,7 +5261,7 @@ img.mfp-img {
 }
 @media screen and (max-width: 480px) {
   .hero-unit .hero-content .hero-text .hero-heading {
-    font-size: 2em;
+    font-size: 1.55em;
   }
 }
 .hero-unit .hero-content .hero-text .hero-heading .name {
