@@ -153,16 +153,20 @@ jQuery( function($){
 	});
 
 	$('#profile').on('click', function () {
-        window.open("http://www.profile.team", '_blank');
-    });
+        	window.open("http://www.profile.team", '_blank');
+    	});
 
-    $('#collegenowgc').on('click', function () {
-        window.open("https://www.collegenowgc.org/find-scholarships/", '_blank');
-    });
+    	$('#collegenowgc').on('click', function () {
+       		window.open("https://www.collegenowgc.org/find-scholarships/", '_blank');
+    	});
 
-    $('#snapp').on('click', function () {
-        window.open("http://mainstream.snappdigital.com/", '_blank');
-    });
+    	$('#snapp').on('click', function () {
+        	window.open("http://mainstream.snappdigital.com/", '_blank');
+    	});
+	
+	$('#crowd').on('click', function () {
+        	window.open("https://www.crowdpleaser.com.au/", '_blank');
+    	});
     
 
 	$('.work-item-filters a').click( function(e) {
